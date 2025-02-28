@@ -1,3 +1,30 @@
+# Tech Stack
+- Typescript
+- Postgres
+- Node.js 
+- Express.js 
+
+
+# How to Run
+- First make sure you have [postgres](https://www.postgresql.org/download/linux/ubuntu/) installed!
+- Make sure you have [Node.js](https://nodejs.org/en/download) installed! 
+- Make sure you configure an env file (I have a sample one in this repo just remember to remove the .sample!) with your db name and password and keep in the root of the directory
+- Login to postgres and run the following in the root of the repo `\i src/database.sql` to create the db and tables
+- Exit out and run `npm i` (I already included the node modules in the bundle so this command is not really needed)
+- Then run `npm run dev` to start the server
+- You can hit the server using curl like so `curl -F 'file=@time-report-43.csv' http://localhost:3000/updatePayRoll`
+- Or alternatively  you can use postman like with a GET request to `http://localhost:3000/getPayRoll` and a POST Request to `http://localhost:3000/updatePayRoll` with a body that set to form data with a key,value pair like so `{file: time-report-42.csv}` (TIP you can hover over the key name field and switch the value type from text to file)
+
+
+# How did you test that your implentation was correct?
+Due to time constraints I didn't have time to do very thorough testing so I only did manual testing using postman and hitting the endpoint using curl. I then compared the returned response from `getPayRoll` to me manually doing the calculation and I also checked the table structures after hitting `updatePayRoll` and so on. If I had more time I would integrate unit tests.  
+
+# If this application was destined for a production environment, what would you add or change?
+If this was destined for a production environment I would add more unit test and integrated tests to make sure it is robust. I would also add more validation and defense to prevent malicious or invalid inputs that could potentially harm the API. I would also create more robust documentation, maybe a test page and a feature to check payperiods for a single employee.
+
+# What compromises did you have to make as a result of the time constraints of this challenge?
+I think I said this already but I definitely didn't have as much testing infrastucture and guards in place as I would like. I know the problem stated that the input would follow a strict format but in a production environment I would have had validators inside the API to verify it actually meets the criteria and reject if it doesn't.  
+
 # Wave Software Development Challenge
 
 Applicants for the Full-stack Developer role at Wave must
@@ -127,7 +154,7 @@ Please commit the following to this `README.md`:
 
 1. Instructions on how to build/run your application
 1. Answers to the following questions:
-   - How did you test that your implementation was correct?
+   - How did you test that your implementation was correct?r
    - If this application was destined for a production environment, what would you add or change?
    - What compromises did you have to make as a result of the time constraints of this challenge?
 

@@ -1,0 +1,43 @@
+{
+  "name": "se-challenge-payroll",
+  "version": "1.0.0",
+  "description": "Applicants for the Full-stack Developer role at Wave must complete the following challenge, and submit a solution prior to the onsite interview.",
+  "main": "dist/api.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "nodemon src/api.ts",
+    "start": "node dist/api.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvchallenges/se-challenge-payroll.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvchallenges/se-challenge-payroll/issues"
+  },
+  "homepage": "https://github.com/wvchallenges/se-challenge-payroll#readme",
+  "dependencies": {
+    "@types/pg": "^8.11.11",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fast-csv": "^5.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.13.3",
+    "pg-format": "^1.0.4",
+    "typescript-eslint": "^8.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.13.5",
+    "@types/pg-format": "^1.0.5",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
