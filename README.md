@@ -10,7 +10,7 @@
 - Make sure you have [Node.js](https://nodejs.org/en/download) installed! 
 - Make sure you configure an env file (I have a sample one in this repo just remember to remove the .sample!) with your db name and password and keep in the root of the directory
 - Login to postgres and run the following in the root of the repo `\i src/database.sql` to create the db and tables
-- Exit out and run `npm i` (I already included the node modules in the bundle so this command is not really needed)
+- Exit out and run `npm i`
 - Then run `npm run dev` to start the server
 - You can hit the server using curl like so `curl -F 'file=@time-report-43.csv' http://localhost:3000/updatePayRoll`
 - Or alternatively  you can use postman like with a GET request to `http://localhost:3000/getPayRoll` and a POST Request to `http://localhost:3000/updatePayRoll` with a body that set to form data with a key,value pair like so `{file: time-report-42.csv}` (TIP you can hover over the key name field and switch the value type from text to file)
